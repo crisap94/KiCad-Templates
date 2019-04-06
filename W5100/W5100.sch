@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:W5100-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -145,7 +146,7 @@ $EndComp
 Wire Wire Line
 	8250 2025 7925 2025
 Wire Wire Line
-	8250 2125 7925 2125
+	8250 2125 7800 2125
 Wire Wire Line
 	8250 2225 7925 2225
 Wire Wire Line
@@ -154,7 +155,7 @@ Text HLabel 7925 2325 0    50   Input ~ 0
 MISO
 Text HLabel 7925 2225 0    50   Input ~ 0
 MOSI
-Text HLabel 7925 2125 0    50   Input ~ 0
+Text HLabel 7750 2125 0    50   Input ~ 0
 SCS
 Text HLabel 7925 2025 0    50   Input ~ 0
 SCLK
@@ -454,7 +455,7 @@ Wire Wire Line
 Wire Wire Line
 	9150 1425 9150 1050
 Wire Wire Line
-	9250 1425 9250 1050
+	9250 1425 9250 1325
 Text Label 8750 1050 3    50   ~ 0
 1V8_OUT
 Text Label 8850 1050 3    50   ~ 0
@@ -578,28 +579,6 @@ Wire Wire Line
 Wire Wire Line
 	850  5075 1600 5075
 $Comp
-L Device:C_Small C?
-U 1 1 5CB12A27
-P 1600 5350
-F 0 "C?" H 1250 5375 50  0000 L CNN
-F 1 "3.3uF/16v" H 1125 5250 50  0000 L CNN
-F 2 "" H 1600 5350 50  0001 C CNN
-F 3 "~" H 1600 5350 50  0001 C CNN
-	1    1600 5350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 5CB12A7F
-P 1900 5350
-F 0 "C?" H 2050 5425 50  0000 L CNN
-F 1 "10uF/16v" H 2050 5300 50  0000 L CNN
-F 2 "" H 1900 5350 50  0001 C CNN
-F 3 "~" H 1900 5350 50  0001 C CNN
-	1    1900 5350
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:Earth #PWR?
 U 1 1 5CB12B02
 P 1750 5725
@@ -655,17 +634,6 @@ Wire Wire Line
 Connection ~ 2700 5075
 Wire Wire Line
 	2700 5075 2700 5250
-$Comp
-L Device:C_Small C?
-U 1 1 5CB5E533
-P 2700 5350
-F 0 "C?" H 2850 5425 50  0000 L CNN
-F 1 "10uF/16v" H 2850 5300 50  0000 L CNN
-F 2 "" H 2700 5350 50  0001 C CNN
-F 3 "~" H 2700 5350 50  0001 C CNN
-	1    2700 5350
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GNDA #PWR?
 U 1 1 5CB63778
@@ -971,28 +939,6 @@ Wire Wire Line
 Connection ~ 4250 5075
 Wire Wire Line
 	4250 5075 4250 4850
-$Comp
-L Device:C_Small C?
-U 1 1 5CB72871
-P 4250 5350
-F 0 "C?" H 3875 5375 50  0000 L CNN
-F 1 "10uF/16v" H 3825 5275 50  0000 L CNN
-F 2 "" H 4250 5350 50  0001 C CNN
-F 3 "~" H 4250 5350 50  0001 C CNN
-	1    4250 5350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 5CB729C5
-P 4975 5350
-F 0 "C?" H 4600 5375 50  0000 L CNN
-F 1 "10uF/16v" H 4550 5275 50  0000 L CNN
-F 2 "" H 4975 5350 50  0001 C CNN
-F 3 "~" H 4975 5350 50  0001 C CNN
-	1    4975 5350
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 5CB72A25
@@ -1425,7 +1371,7 @@ Wire Wire Line
 Text Label 7900 1225 3    50   ~ 0
 3V3D
 Wire Wire Line
-	7900 1525 7900 1225
+	7900 1525 7900 1450
 $Comp
 L power:Earth #PWR?
 U 1 1 5CD6C90B
@@ -1481,4 +1427,258 @@ Wire Notes Line
 	7525 6050 7525 850 
 Text Notes 7600 5925 0    118  ~ 0
 W5100
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5CAA19FA
+P 9450 1225
+F 0 "#PWR?" H 9450 1075 50  0001 C CNN
+F 1 "+3.3V" H 9465 1398 50  0000 C CNN
+F 2 "" H 9450 1225 50  0001 C CNN
+F 3 "" H 9450 1225 50  0001 C CNN
+	1    9450 1225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 1225 9450 1325
+Wire Wire Line
+	9450 1325 9250 1325
+Connection ~ 9250 1325
+Wire Wire Line
+	9250 1325 9250 1050
+$Comp
+L power:VCC #PWR?
+U 1 1 5CABEE6D
+P 3025 3875
+F 0 "#PWR?" H 3025 3725 50  0001 C CNN
+F 1 "VCC" H 3042 4048 50  0000 C CNN
+F 2 "" H 3025 3875 50  0001 C CNN
+F 3 "" H 3025 3875 50  0001 C CNN
+	1    3025 3875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3025 3950 3200 3950
+Wire Wire Line
+	3025 3875 3025 3950
+Wire Wire Line
+	3800 4050 3800 3950
+Connection ~ 3800 3950
+Wire Wire Line
+	3800 3950 3875 3950
+$Comp
+L power:Earth #PWR?
+U 1 1 5CADB0ED
+P 4175 4350
+F 0 "#PWR?" H 4175 4100 50  0001 C CNN
+F 1 "Earth" H 4175 4200 50  0001 C CNN
+F 2 "" H 4175 4350 50  0001 C CNN
+F 3 "~" H 4175 4350 50  0001 C CNN
+	1    4175 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 4250 3800 4300
+Wire Wire Line
+	3800 4300 4175 4300
+Wire Wire Line
+	4175 4300 4175 4250
+Wire Wire Line
+	4175 4300 4175 4350
+Connection ~ 4175 4300
+$Comp
+L Device:CP_Small C?
+U 1 1 5CAF90DC
+P 1600 5350
+F 0 "C?" H 1688 5396 50  0000 L CNN
+F 1 "3.3uF/16v" H 1688 5305 50  0000 L CNN
+F 2 "" H 1600 5350 50  0001 C CNN
+F 3 "~" H 1600 5350 50  0001 C CNN
+	1    1600 5350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:CP_Small C?
+U 1 1 5CB07D53
+P 1900 5350
+F 0 "C?" H 1812 5396 50  0000 R CNN
+F 1 "10uF/16v" H 1812 5305 50  0000 R CNN
+F 2 "" H 1900 5350 50  0001 C CNN
+F 3 "~" H 1900 5350 50  0001 C CNN
+	1    1900 5350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:CP_Small C?
+U 1 1 5CB07F99
+P 2700 5350
+F 0 "C?" H 2612 5396 50  0000 R CNN
+F 1 "10uF/16v" H 2612 5305 50  0000 R CNN
+F 2 "" H 2700 5350 50  0001 C CNN
+F 3 "~" H 2700 5350 50  0001 C CNN
+	1    2700 5350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:CP_Small C?
+U 1 1 5CB08583
+P 4250 5350
+F 0 "C?" H 4162 5396 50  0000 R CNN
+F 1 "10uF/16v" H 4162 5305 50  0000 R CNN
+F 2 "" H 4250 5350 50  0001 C CNN
+F 3 "~" H 4250 5350 50  0001 C CNN
+	1    4250 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP_Small C?
+U 1 1 5CB1714D
+P 4975 5350
+F 0 "C?" H 4887 5396 50  0000 R CNN
+F 1 "10uF/16v" H 4887 5305 50  0000 R CNN
+F 2 "" H 4975 5350 50  0001 C CNN
+F 3 "~" H 4975 5350 50  0001 C CNN
+	1    4975 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP_Small C?
+U 1 1 5CB178E6
+P 3800 4150
+F 0 "C?" H 3888 4196 50  0000 L CNN
+F 1 "100uF/16v" H 3888 4105 50  0000 L CNN
+F 2 "" H 3800 4150 50  0001 C CNN
+F 3 "~" H 3800 4150 50  0001 C CNN
+	1    3800 4150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5CB2673D
+P 3200 4150
+F 0 "C?" H 3350 4125 50  0000 L CNN
+F 1 "100nF" H 3300 4025 50  0000 L CNN
+F 2 "" H 3200 4150 50  0001 C CNN
+F 3 "~" H 3200 4150 50  0001 C CNN
+	1    3200 4150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 4050 3200 3950
+Connection ~ 3200 3950
+Wire Wire Line
+	3200 3950 3800 3950
+Wire Wire Line
+	3200 4250 3200 4300
+Wire Wire Line
+	3200 4300 3800 4300
+Connection ~ 3800 4300
+$Comp
+L Device:C_Small C?
+U 1 1 5CBE996E
+P 4650 4150
+F 0 "C?" H 4825 4175 50  0000 L CNN
+F 1 "100uF" H 4800 4075 50  0000 L CNN
+F 2 "" H 4650 4150 50  0001 C CNN
+F 3 "~" H 4650 4150 50  0001 C CNN
+	1    4650 4150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5CBE9A6B
+P 4900 3775
+F 0 "#PWR?" H 4900 3625 50  0001 C CNN
+F 1 "+3.3V" H 4915 3948 50  0000 C CNN
+F 2 "" H 4900 3775 50  0001 C CNN
+F 3 "" H 4900 3775 50  0001 C CNN
+	1    4900 3775
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LM1117-3.3 U?
+U 1 1 5CBE9E05
+P 4175 3950
+F 0 "U?" H 4175 4192 50  0000 C CNN
+F 1 "LM1117-3.3" H 4175 4101 50  0000 C CNN
+F 2 "" H 4175 3950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 4175 3950 50  0001 C CNN
+	1    4175 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4475 3950 4650 3950
+Wire Wire Line
+	4650 3950 4650 4050
+Wire Wire Line
+	4650 4250 4650 4300
+Wire Wire Line
+	4650 4300 4175 4300
+Wire Wire Line
+	4650 3950 4900 3950
+Connection ~ 4650 3950
+Wire Notes Line
+	2825 3500 5150 3500
+Wire Notes Line
+	5150 3500 5150 4475
+Wire Notes Line
+	5150 4475 2825 4475
+Wire Notes Line
+	2825 4475 2825 3500
+$Comp
+L Device:LED_Small D?
+U 1 1 5CC89E33
+P 4900 4150
+F 0 "D?" V 4946 4082 50  0000 R CNN
+F 1 "pwr" V 4855 4082 50  0000 R CNN
+F 2 "" V 4900 4150 50  0001 C CNN
+F 3 "~" V 4900 4150 50  0001 C CNN
+	1    4900 4150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5CCEA6B5
+P 4775 4300
+F 0 "R?" V 4700 4275 50  0000 L CNN
+F 1 "100" V 4875 4250 50  0000 L CNN
+F 2 "" H 4775 4300 50  0001 C CNN
+F 3 "~" H 4775 4300 50  0001 C CNN
+	1    4775 4300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4675 4300 4650 4300
+Connection ~ 4650 4300
+Wire Wire Line
+	4875 4300 4900 4300
+Wire Wire Line
+	4900 3775 4900 3950
+Wire Wire Line
+	4900 3950 4900 4050
+Connection ~ 4900 3950
+Wire Wire Line
+	4900 4250 4900 4300
+$Comp
+L Device:R_Small R?
+U 1 1 5CD80754
+P 7800 1825
+F 0 "R?" H 7859 1871 50  0000 L CNN
+F 1 "4k7" H 7859 1780 50  0000 L CNN
+F 2 "" H 7800 1825 50  0001 C CNN
+F 3 "~" H 7800 1825 50  0001 C CNN
+	1    7800 1825
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 1925 7800 2125
+Connection ~ 7800 2125
+Wire Wire Line
+	7800 2125 7750 2125
+Wire Wire Line
+	7800 1725 7800 1450
+Wire Wire Line
+	7800 1450 7900 1450
+Connection ~ 7900 1450
+Wire Wire Line
+	7900 1450 7900 1225
 $EndSCHEMATC
