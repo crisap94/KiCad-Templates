@@ -1,0 +1,37 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# MAX5969BETB+
+#
+DEF MAX5969BETB+ U 0 40 Y Y 1 L N
+F0 "U" 588 -1528 50 H V L BNN
+F1 "MAX5969BETB+" 397 278 50 H V L BNN
+F2 "DFN300X300X80-11N" 0 0 50 H I L BNN
+F3 "MAX5969BETB+" 0 0 50 H I L BNN
+F4 "None" 0 0 50 H I L BNN
+F5 "TDFN-10 Maxim Integrated" 0 0 50 H I L BNN
+F6 "Maxim Integrated" 0 0 50 H I L BNN
+F7 "Unavailable" 0 0 50 H I L BNN
+F8 "IEEE 802.3af/at-Compliant Powered Device Interface 10-Pin TDFN EP" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 5 300 200 300 -1300 N
+P 2 0 0 5 300 -1300 1300 -1300 N
+P 2 0 0 5 1300 -1300 1300 200 N
+P 2 0 0 5 1300 200 300 200 N
+X VDD 1 0 0 300 R 40 40 0 0 W 
+X RTN 6 0 -200 300 R 40 40 0 0 I 
+X DET 2 0 -300 300 R 40 40 0 0 I 
+X WAD 7 0 -400 300 R 40 40 0 0 I 
+X CLS 10 0 -500 300 R 40 40 0 0 I 
+X I.C 4 0 -600 300 R 40 40 0 0 N 
+X N.C. 3 0 -800 300 R 40 40 0 0 N 
+X VSS 5 0 -1000 300 R 40 40 0 0 W 
+X EP 11 0 -1100 300 R 40 40 0 0 W 
+X PG 8 1600 0 300 L 40 40 0 0 O 
+X ~2EC 9 1600 -100 300 L 40 40 0 0 O 
+ENDDRAW
+ENDDEF
+#
+# End Library
